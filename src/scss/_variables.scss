@@ -1,0 +1,24 @@
+/* 0. Breakpoints ==================================== */
+// Small tablets and large smartphones (landscape view)
+$breakpoint-phone: 576px;
+
+// Small tablets (portrait view)
+$breakpoint-tablet: 768px;
+
+// Tablets and small desktops
+$breakpoint-desktop: 992px;
+
+// Large tablets and desktops
+$breakpoint-xl: 1200px;
+
+/* 1. Colors ========================================= */
+$primary-color: #a6c9c7;
+$text-color: #fffcf7;
+$accent-color: #9b79da;
+
+/* 2. Fonts  ========================================= */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;600&display=swap');
+
+$main-font: "'Raleway', sans-serif";
+

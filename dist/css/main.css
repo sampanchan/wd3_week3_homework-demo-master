@@ -1,0 +1,365 @@
+/* 0. Breakpoints ==================================== */
+/* 1. Colors ========================================= */
+/* 2. Fonts  ========================================= */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;600&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 
+=====================================================
+Project:	
+Developer:		Michelle Graham akak @webDevShelly
+=====================================================
+*/
+/* 0. Reset ========================================= */
+/* 1. Main Layout =================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #a6c9c7;
+  color: #3a3939;
+  font-family: "Raleway", sans-serif;
+}
+
+/* 2. Content ====================================== */
+header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  padding: 20px;
+  background-image: url("/src/img/water-bungalow.jpg");
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (min-width: 576px) {
+  header {
+    height: 400px;
+  }
+}
+header h2 {
+  font-size: 2rem;
+  color: #5b59bb;
+  background: #f6fafa;
+  padding: 1rem;
+  border-radius: 20px;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+@media screen and (min-width: 768px) {
+  header h2 {
+    margin: 0 auto;
+    padding: 2rem;
+    letter-spacing: 8px;
+  }
+}
+@media screen and (min-width: 992px) {
+  header h2 {
+    margin: 0 auto;
+    padding: 2rem;
+    letter-spacing: 10px;
+  }
+}
+
+main {
+  width: 100%;
+  max-width: 992px;
+  padding: 10px;
+  margin: 0 auto;
+}
+main .gallery-title {
+  margin: 3rem 0;
+}
+main .gallery-title h1 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: 600;
+  color: #fffcf7;
+}
+main .gallery-title h3 {
+  line-height: 1.5rem;
+  color: #9b79da;
+}
+main .gallery-description {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .gallery-description > p {
+  line-height: 1.5rem;
+  flex-basis: 100%;
+  margin: 1rem 0;
+  padding: 0 1.5rem 0 0;
+}
+@media screen and (min-width: 992px) {
+  main .gallery-description > p {
+    flex-basis: 50%;
+  }
+}
+main .gallery-description > p a {
+  color: #9b79da;
+  text-decoration: none;
+}
+main .gallery-description > p a:hover {
+  color: #4682f1;
+}
+main .gallery-image-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .gallery-image-grid figure {
+  position: relative;
+  flex-basis: 100%;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+@media screen and (min-width: 576px) {
+  main .gallery-image-grid figure {
+    flex-basis: 50%;
+  }
+  main .gallery-image-grid figure:nth-child(2n-1) {
+    flex-basis: calc(50% - 5px);
+    margin-right: 5px;
+  }
+}
+main .gallery-image-grid figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+main .gallery-image-grid figure figcaption {
+  position: absolute;
+  width: 100%;
+  padding: 20px;
+  bottom: 0;
+  color: #fffcf7;
+  background: rgba(23, 76, 156, 0.6);
+  transition: 0.3s;
+  -ms-transform: translateY(100%);
+      transform: translateY(100%);
+}
+main .gallery-image-grid figure:hover figcaption {
+  -ms-transform: translateY(0);
+      transform: translateY(0);
+  border-radius: 10px;
+}
+main .gallery-image-grid figure:hover img {
+  -ms-transform: scale(1.2);
+      transform: scale(1.2);
+  border-radius: 10px;
+}
+main .comments {
+  margin: 3rem 0;
+}
+main .comments h4 {
+  padding: 5px 0px;
+  color: #fffcf7;
+}
+main .comments .comment {
+  background: rgba(47, 102, 219, 0.1);
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+main .comments .comment img {
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  box-shadow: -2px 5px 19px 1px rgba(95, 152, 255, 0.48);
+}
+main .comments .comment > p {
+  color: white;
+  line-height: 1.5;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  background: #3192a5;
+  color: #fffcf7;
+}
+footer > p {
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 992px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+footer nav {
+  display: flex;
+}
+footer nav .social {
+  margin-right: 1rem;
+}
+footer nav a {
+  text-decoration: none;
+  color: #fffcf7;
+  font-weight: 100;
+}
+footer nav a:hover {
+  color: #9446f3;
+}
+footer nav a img {
+  width: 25px;
+  height: auto;
+  margin-right: 0.3rem;
+}
+
+.media, main .comments .comment, footer nav .social {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.media .media-figure, main .comments .comment .media-figure, footer nav .social .media-figure {
+  margin-right: 1em;
+  margin-bottom: 10px;
+}
+.media .media-content, main .comments .comment .media-content, footer nav .social .media-content {
+  flex: 1;
+}
+/*# sourceMappingURL=main.css.map */
